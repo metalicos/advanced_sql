@@ -1,0 +1,5 @@
+SELECT count(studA.student_id), studA.mark, studA.subject_id
+FROM exam_result studA, exam_result studB
+WHERE studA.subject_id = studB.subject_id 
+AND studA.mark = studB.mark
+GROUP BY studA.student_id, studA.mark, studA.subject_id;

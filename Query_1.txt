@@ -1,0 +1,3 @@
+SELECT s.primary_skill
+FROM student s 
+WHERE s.primary_skill ~* '[^ -'] [^ -']';

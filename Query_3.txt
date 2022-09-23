@@ -1,0 +1,5 @@
+SELECT count(s.id), r.subject_id
+FROM student s
+JOIN exam_result r ON r.student_id = s.id
+WHERE r.mark > 3
+GROUP BY r.mark, r.subject_id ORDER BY count(s.id) DESC;

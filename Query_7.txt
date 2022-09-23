@@ -1,0 +1,6 @@
+SELECT sub
+FROM EXAM_RESULT res
+JOIN SUBJECT sub on sub.id = res.subject_id
+JOIN student stud on stud.id = res.student_id
+JOIN student stud2 on stud2.primary_skill = stud.primary_skill
+WHERE res.mark > 3;
