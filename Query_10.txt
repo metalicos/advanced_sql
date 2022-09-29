@@ -1,0 +1,4 @@
+SELECT s.*
+FROM exam_result r
+JOIN student s ON r.student_id = s.id
+WHERE AVG(r.mark) < (SELECT AVG(r.mark) FROM r WHERE s.id = r.student_id);
